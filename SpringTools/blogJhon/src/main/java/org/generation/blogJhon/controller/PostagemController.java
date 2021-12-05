@@ -2,6 +2,8 @@ package org.generation.blogJhon.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.generation.blogJhon.model.Postagem;
 import org.generation.blogJhon.repository.PostagemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,14 +48,14 @@ public class PostagemController {
 
     // inserir dados no banco de dados
     @PostMapping
-    public ResponseEntity<Postagem> post(@RequestBody Postagem postagem)
+    public ResponseEntity<Postagem> post(@Valid @RequestBody Postagem postagem)
     {
         return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(postagem));
     }
 
     // atualizar um dado ja existente no banco de dados
     @PutMapping
-    public ResponseEntity<Postagem> put(@RequestBody Postagem postagem)
+    public ResponseEntity<Postagem> put(@Valid @RequestBody Postagem postagem)
     {
         return ResponseEntity.status(HttpStatus.OK).body(repository.save(postagem));
     }
