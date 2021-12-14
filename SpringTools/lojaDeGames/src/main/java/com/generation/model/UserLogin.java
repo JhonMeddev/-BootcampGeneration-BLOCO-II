@@ -1,4 +1,4 @@
-package org.generation.blogJhon.model;
+package com.generation.model;
 
 public class UserLogin {
 	
@@ -18,7 +18,17 @@ public class UserLogin {
 	
 	private String senha;
 	
+	private String foto;
+	
 	private String token;
+
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
 
 	public String getNome() {
 		return nome;
@@ -51,6 +61,4 @@ public class UserLogin {
 	public void setToken(String token) {
 		this.token = token;
 	}
-	
-	
 }
