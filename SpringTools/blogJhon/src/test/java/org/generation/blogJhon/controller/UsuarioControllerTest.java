@@ -73,7 +73,7 @@ public class UsuarioControllerTest {
 	public void deveAtualizarUmUsuario() {
 
 		Optional<Usuario> usuarioCreate = usuarioService.cadastrarUsuario(new Usuario(0L, 
-			"João Silva", "joaodireita@gmail.com.br", "13465278", "Sem foto"));
+			"João Silva", "joaodireita@gmail.com.br", "13465278", null));
 
 		Usuario usuarioUpdate = new Usuario(usuarioCreate.get().getId(), 
 			"João Silva Direita", "joaodireita@gmail.com.br", "13465278", "Sem foto");
